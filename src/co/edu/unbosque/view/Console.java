@@ -82,4 +82,18 @@ public class Console {
 	public void imprimirSalto() {
 		System.out.println();
 	}
+	
+	public int readInt() {
+		while (true) {
+			try {
+				return lector.nextInt();
+			} catch (InputMismatchException e) {
+				System.err.println();
+				System.err.println("Opcion invalida");
+				System.err.println("Verifique que la opcion este dentro del menú...");
+				lector.nextLine();
+			}
+			continue;
+		}
+	}
 }

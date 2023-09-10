@@ -21,7 +21,6 @@ public class QueueImp<T> implements Queue<T>{
 
 	@Override
 	public int size() {
-
 		return infos.size();
 	}
 	@Override

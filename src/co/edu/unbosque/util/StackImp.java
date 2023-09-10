@@ -38,17 +38,17 @@ public class StackImp<T> implements Stack<T>{
 	public String toString() {
 		
 		StringBuilder sb = new StringBuilder();
-		sb.append("Top[");
+
 		DNode<T> aux = this.infos.getHead();
 		for (int i = 0; i < this.infos.getSize(); i++) {
-			sb.append(aux.getInfo());
+			sb.append("| "+ aux.getInfo());
 			if(aux == this.infos.getTail()) {
 				break;
 			}
-			sb.append("-");
+			sb.append(" |\n");
 			aux = aux.getNext();
 		}
-		sb.append("] Bottom");
+		sb.append(" |");
 		return sb.toString();
 		
 	}
